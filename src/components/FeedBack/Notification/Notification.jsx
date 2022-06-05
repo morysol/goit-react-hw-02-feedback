@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import s from './Notification.module.css';
+
 const Notification = ({ noFeedback }) => (
-  <p className="Notification">{noFeedback}</p>
+  <p className={s.alert}>{noFeedback}</p>
 );
 
 Notification.propTypes = {
