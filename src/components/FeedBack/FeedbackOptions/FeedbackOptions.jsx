@@ -1,8 +1,7 @@
 import React from 'react';
 
-const FeedbackOptions = ({ state, onLeaveFeedback }) => (
+const FeedbackOptions = ({ onLeaveFeedback }) => (
   <div id="FeedBackControls" className="FeedBackControls">
-    <p className="controlsLabel">Please, leave your feedback!</p>
     <button onClick={onLeaveFeedback} id="good" type="submit" className="good">
       good
     </button>
