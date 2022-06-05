@@ -57,7 +57,7 @@ class Feedback extends React.Component {
               )}
             ></Statistics>
           ) : (
-            <Notification></Notification>
+            <Notification noFeedback="There is no feedback yet!"></Notification>
           )}
         </Section>
       </div>

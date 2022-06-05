@@ -1,7 +1,11 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
-const Notification = () => (
-  <p className="Notification">There is no feedback yet!</p>
+const Notification = ({ noFeedback }) => (
+  <p className="Notification">{noFeedback}</p>
 );
 
+Notification.propTypes = {
+  noFeedback: PropTypes.string,
+};
 export default Notification;

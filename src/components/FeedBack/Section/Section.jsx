@@ -1,9 +1,14 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
-const Section = props => (
+const Section = ({ title, children }) => (
   <section className="Section">
-    {props.title} {props.children}
+    {title} {children}
   </section>
 );
 
+Section.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.object,
+};
 export default Section;
