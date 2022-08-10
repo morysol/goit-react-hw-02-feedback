@@ -2,32 +2,19 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import s from './FeedbackOptions.module.css';
 
-const FeedbackOptions = ({ onLeaveFeedback }) => (
+const FeedbackOptions = ({ onLeaveFeedback, options }) => (
   <div id="FeedBackControls" className={s.controls}>
-    <button
-      onClick={onLeaveFeedback}
-      id="good"
-      type="submit"
-      className={s.feedbackButton}
-    >
-      good
-    </button>
-    <button
-      onClick={onLeaveFeedback}
-      id="neutral"
-      type="submit"
-      className={s.feedbackButton}
-    >
-      neutral
-    </button>
-    <button
-      onClick={onLeaveFeedback}
-      id="bad"
-      type="submit"
-      className={s.feedbackButton}
-    >
-      bad
-    </button>
+    {Object.keys(options).map(key => (
+      <button
+        onClick={onLeaveFeedback}
+        id={key}
+        type="submit"
+        className={s.feedbackButton}
+        key={key}
+      >
+        {key}
+      </button>
+    ))}
   </div>
 );
 

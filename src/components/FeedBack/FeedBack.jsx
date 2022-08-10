@@ -41,8 +41,9 @@ class Feedback extends React.Component {
       <div>
         <Section title="Please, leave your feedback!">
           <FeedbackOptions
+            options={this.state}
             onLeaveFeedback={this.onLeaveFeedback}
-          ></FeedbackOptions>
+          />
         </Section>
 
         <Section title="Statistics">
